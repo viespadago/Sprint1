@@ -1,0 +1,202 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    max-width:1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    height: 30vh;
+    padding: .5em;
+    margin: 10px;
+    background-image: url("../images/header.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 120% 175%;
+    Background-position: bottom;
+    display: flex;
+    flex-direction: column;
+}
+
+header > div {
+  margin: 10px;
+  flex: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+header > div > p {
+  margin: 10px;
+  flex: auto;
+}
+
+header > div > p:nth-child(2):hover,
+header > div > p:nth-child(3):hover,
+header > div > p:nth-child(4):hover,
+header > div > p:nth-child(5):hover,
+header > div > p:nth-child(6):hover {
+  font-size: 24px;
+  font-weight: bolder;
+  text-decoration:underline;
+  cursor: pointer;
+}
+
+header > div:nth-child(even) {
+  background: grey;
+  color: orange;
+  margin-bottom: 0px;
+  opacity: 0.7;
+  } 
+
+header > div:nth-child(even) > p{
+  font-size: 24px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+main {
+    flex: auto;
+    padding: .3em;
+    display: flex;
+    flex-direction: row;
+}
+
+a {
+    color: gray;
+    text-decoration: none;
+}
+
+main > div {
+  margin: 5px;
+  background: lightgrey;
+  flex: auto;
+}
+
+main > div:nth-child(odd) {
+  width: 75%;
+  display: flex; 
+  flex-direction: column;
+  }
+
+main > div:nth-child(even) {
+  width: 15%;
+  } 
+
+
+main > div > div:nth-child(1),
+main > div > div:nth-child(2){
+  display: flex; 
+  flex-direction: row;
+  flex: auto;
+  }
+
+main > div > div:nth-child(1) > div,
+main > div > div:nth-child(2) > div{
+  margin: 10px;
+  background: whitesmoke;
+  padding: .5em;
+  width:50%;
+  }
+
+main > div > div > div > h4{
+  padding: .5em;
+  background: palevioletred;
+  color: white;
+  margin-top: 2px;
+  }
+
+.img{
+  padding-top: 12em;
+  background-image: url("../images/sakura.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: yellow;
+  } 
+
+main > div > div:nth-child(1) > div:nth-child(2) > .img{
+  background-image: url("../images/comida.jpg");
+  }  
+  
+main > div > div:nth-child(2) > div:nth-child(1) > .img{
+  background-image: url("../images/fuji.jpg");
+  } 
+
+main > div > div:nth-child(2) > div:nth-child(2) > .img{
+  background-image: url("../images/noche.jpg");
+  } 
+
+.articulo {
+  margin-top: -25px;
+  display: flex; 
+  flex-direction: row;
+  }  
+
+main > div > p,
+main > div > h4 {
+  margin: 10px;
+  text-align: center;
+  }
+
+main > div > div:nth-child(3) > p {
+  text-align: center;
+  } 
+
+footer {
+    height: 3vh;
+    padding: .5em;
+    margin: 10px;
+    background: lightgrey;
+    display: flex;
+    flex-direction: column;
+}
+
+footer > div {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background: whitesmoke;
+  flex: auto;
+  text-align: center;
+}
+
+/* versio per mobils */
+@media only screen and (max-width: 600px) {
+  header {
+    height: auto;
+  }
+
+  header > div {
+    flex-direction: column;
+  }
+
+  main > div > div:nth-child(1),
+  main > div > div:nth-child(2) {
+    flex-direction: column;
+  }
+}
+
+/* versio per tablets */
+@media only screen and (max-width: 992px) {
+header {
+    height: auto;
+  }  
+
+  main {
+    flex-direction: column;
+}
+
+main > div:nth-child(odd) {
+  width: auto;
+  }
+
+main > div:nth-child(even) {
+  width: auto;
+  } 
+}
